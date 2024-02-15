@@ -1,13 +1,93 @@
 body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: lightgray;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.timer-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.timer-label,
+.timer {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#break-section,
+#session-section {
+  display: flex;
+  align-items: center;
+}
+
+#break-label,
+#session-label,
+#break-length,
+#session-length {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#break-decrement,
+#session-decrement,
+#break-increment,
+#session-increment {
+  cursor: pointer;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 0 5px;
+  user-select: none;
+}
+
+#break-decrement.disabled,
+#break-increment.disabled,
+#session-decrement.disabled,
+#session-increment.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#timer-label {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+#time-left {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+#start_stop,
+#reset {
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  margin: 10px;
+  user-select: none;
+}
+
+#start_stop:hover,
+#reset:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+audio {
+  display: none;
 }
